@@ -73,7 +73,7 @@ export const SideMenu = () => {
       <nav
         // TODO: efecto slide del menú
         className={clsx(
-          "fixed p-5 top-0 right-0 w-[400px] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300",
+          "fixed p-5 top-0 right-0 w-[280px] md:w-[400px] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300",
           {
             "translate-x-full": !isMenuOpen
           }
