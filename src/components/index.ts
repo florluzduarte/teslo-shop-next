@@ -1,3 +1,8 @@
+//Product
+export { ProductSlideshow } from "./product/slideshow/ProductSlideshow";
+export { SizeSelector } from "./product/size-selector/SizeSelector";
+export { QuantitySelector } from "./product/quantity-selector/QuantitySelector";
+
 //Products
 export { ProductGrid } from "./products/product-grid/ProductGrid";
 export { ProductGridItem } from "./products/product-grid/ProductGridItem";

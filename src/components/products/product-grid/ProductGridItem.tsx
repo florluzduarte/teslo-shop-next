@@ -34,7 +34,7 @@ export const ProductGridItem = ({ product }: ProductGridItemProps) => {
         >
           {product.title}
         </Link>
-        <p className="font-bold">${product.price}</p>
+        <p className="font-bold">${product.price.toFixed(2)}</p>
       </div>
     </div>
   )

@@ -1,13 +1,14 @@
+import { notFound } from "next/navigation";
+
 import { titleFont } from "@/config/fonts";
 import { initialData } from "@/seed/seed";
-import { notFound } from "next/navigation";
+import { ProductSlideshow, QuantitySelector, SizeSelector } from "@/components";
 
 interface ProductPageProps {
   params: {
     slug: string;
   }
 }
-
 
 export default function ProductPage({ params }: ProductPageProps) {
 
@@ -22,17 +23,19 @@ export default function ProductPage({ params }: ProductPageProps) {
     <div className="mt-5 mb-20 grid grid-cols-1 md:grid-cols-3 gap-3">
       {/* SlideShow */}
       <div className="col-span-1 md:col-span-2">
-        <h1 className="bg-red-100">Hola Mundo</h1>
+        <ProductSlideshow title={product.title} images={product.images} />
       </div>
 
       {/* Detalles */}
-      <div className="grid-cols-1 px-5 bg-blue-200">
+      <div className="grid-cols-1 px-5">
         <h1 className={`${titleFont.className} antialiased font-bold text-xl mb-5`}>{product.title}</h1>
         <p className="font-lg mb-5">${product.price.toFixed(2)}</p>
 
         {/* Selector de Talles */}
+        <SizeSelector availableSizes={product.sizes} selectedSize={product.sizes[2]} />
 
         {/* Selector de Cantidad */}
+        <QuantitySelector quantity={2} />
 
         {/* Button AddToCart */}
         <button className="btn-primary my-5">Agregar al carrito</button>
