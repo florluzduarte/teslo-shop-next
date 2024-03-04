@@ -21,7 +21,7 @@ export const QuantitySelector = ({ quantity }: QuantitySelectorProps) => {
   }
 
   return (
-    <div className="flex mt-5 items-center">
+    <div className="flex items-center">
       <button onClick={handleDecrement}>
         <IoRemoveCircleOutline size={30}
           className={`${counter === 0 ? "text-gray-300" : ""}`}

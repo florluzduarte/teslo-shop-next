@@ -1,3 +1,6 @@
+//Cart
+export { InCartItem } from "./cart/in-cart-item/InCartItem";
+
 //Product
 export { ProductSlideshow } from "./product/slideshow/ProductSlideshow";
 export { ProductMobileSlideshow } from "./product/slideshow/ProductMobileSlideshow";
