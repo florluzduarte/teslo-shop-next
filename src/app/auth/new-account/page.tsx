@@ -1,11 +1,16 @@
 import { titleFont } from '@/config/fonts';
 import Link from 'next/link';
 
-export default function Login() {
+export default function NewAccount() {
   return (
     <main className="flex flex-col min-h-screen justify-center">
-      <h1 className={`${titleFont.className} text-4xl mb-5`}>Ingresar</h1>
+      <h1 className={`${titleFont.className} text-4xl mb-5`}>Regístrate</h1>
       <div className="flex flex-col">
+        <label htmlFor="email">Nombre Completo</label>
+        <input
+          className="px-5 py-2 border bg-gray-200 rounded mb-5"
+          type="text" />
+
         <label htmlFor="email">Correo electrónico</label>
         <input
           className="px-5 py-2 border bg-gray-200 rounded mb-5"
@@ -18,7 +23,7 @@ export default function Login() {
 
         <button
           className="btn-primary">
-          Ingresar
+          Crear cuenta
         </button>
 
         {/* divisor line */}
@@ -29,9 +34,9 @@ export default function Login() {
         </div>
 
         <Link
-          href="/auth/new-account"
+          href="/auth/login"
           className="btn-secondary text-center">
-          Crear una nueva cuenta
+          Ingresar
         </Link>
 
       </div>
