@@ -8,7 +8,9 @@ Este es un proyecto realizado en el curso de Next.js de Fernando Herrera (Versi�
 2. Crear una copia del archivo ```.env.template``` y renombrarlo a ```.env```. A continuación modificar las variables de entorno. 
 3. Realizar las instalaciones necesarias usando el comando ```npm install```
 4. Levantar la base de datos usando el comando ```docker compose up -d```
-5. Levantar el servidor dev con el comando ```npm run dev```
+5. Utilizar el comando ```npx prisma migrate dev``` para volver a generar la base de datos con todas sus relaciones
+6. Correr el seed de la DB con el comando ```npm run seed```
+7. Levantar el servidor dev con el comando ```npm run dev```
 
 ## Cómo correr la aplicación en modo Producción
 
